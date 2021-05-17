@@ -6,7 +6,7 @@ public class Student {
         System.out.println("Tra tra tra");
     }
 
-    public void songRKelly() {
+    public void song() {
         System.out.println("I believe I can fly");
     }
 
@@ -15,8 +15,8 @@ public class Student {
         petya.music();
         petya.music();
         petya.music();
-        petya.songRKelly();
-        petya.songRKelly();
-        petya.songRKelly();
+        petya.song();
+        petya.song();
+        petya.song();
     }
 }
