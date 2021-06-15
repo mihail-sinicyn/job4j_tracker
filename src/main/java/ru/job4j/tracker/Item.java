@@ -5,10 +5,6 @@ import java.time.LocalDateTime;
 public class Item {
     private int id;
     private String name;
-    /*
-        Поле типа LocalDateTime, присваиваем имя created.
-        Сразу проинициализируем это поле текущей датой и временем, используя статический метод now()
-    */
     private LocalDateTime created = LocalDateTime.now();
 
     public Item() {
