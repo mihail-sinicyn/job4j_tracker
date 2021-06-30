@@ -8,6 +8,7 @@ public class Item {
     private LocalDateTime created = LocalDateTime.now();
 
     public Item() {
+
     }
 
     public Item(String name) {
@@ -17,6 +18,15 @@ public class Item {
     public Item(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Item {" + " name = " + name + ";" + " id = " + id + " }";
+    }
+
+    public LocalDateTime getCreated() {
+        return created;
     }
 
     public int getId() {
@@ -33,9 +43,5 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public LocalDateTime getLocalDateTime() { /* добавляем геттер, чтобы получить доступ к созданному полю */
-        return created;
     }
 }
