@@ -6,7 +6,7 @@ public class StartUI {
         boolean run = true;
         while (run) {
             showMenu();
-            int select = input.askInt("Select: ");
+            int select = Integer.parseInt(input.askStr("Select: "));
             if (select == 0) {
                 System.out.println("=== Create a new Item ====");
                 String name = input.askStr("Enter name: ");
@@ -21,7 +21,7 @@ public class StartUI {
                         System.out.println(item);
                     }
                 } else {
-                    System.out.println("Хранилище еще не содержит заявок");
+                    System.out.println("Хранилище еще не содержит заявок.");
                 }
             } else if (select == 2) {
                 System.out.println("=== Edit item ====");
@@ -61,9 +61,7 @@ public class StartUI {
                 } else {
                     System.out.println("Заявки с именем: " + name + " не найдены.");
                 }
-            } else if (select != 6) {
-                System.out.println("Пользователь выбрал: " + select);
-            } else {
+            } else if (select == 6) {
                 run = false;
             }
         }
@@ -85,5 +83,6 @@ public class StartUI {
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
         new StartUI().init(input, tracker);
+
     }
 }
