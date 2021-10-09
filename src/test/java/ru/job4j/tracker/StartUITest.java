@@ -170,4 +170,54 @@ public class StartUITest {
                         + "1. Exit Program" + System.lineSeparator()
         ));
     }
+
+    @Test
+    public void findByNameActionTestItem() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"0", "test", "1"}
+        );
+        Tracker tracker = new Tracker();
+        Item item = tracker.add(new Item("test"));
+        UserAction[] actions = {
+                new FindByNameAction(out),
+                new ExitAction(out)
+        };
+        new StartUI(out).init(in, tracker, actions);
+        assertThat(out.toString(), is(
+                "Menu." + System.lineSeparator()
+                        + "0. Find item by name" + System.lineSeparator()
+                        + "1. Exit Program" + System.lineSeparator()
+                        + "=== Find items by name ====" + System.lineSeparator()
+                        + item + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. Find item by name" + System.lineSeparator()
+                        + "1. Exit Program" + System.lineSeparator()
+        ));
+    }
+
+    @Test
+    public void findByIdActionTestItem() {
+        Output out = new StubOutput();
+        Input in = new StubInput(
+                new String[] {"0", "1", "1"}
+        );
+        Tracker tracker = new Tracker();
+        Item item = tracker.add(new Item("test"));
+        UserAction[] actions = {
+                new FindByIdAction(out),
+                new ExitAction(out)
+        };
+        new StartUI(out).init(in, tracker, actions);
+        assertThat(out.toString(), is(
+                "Menu." + System.lineSeparator()
+                        + "0. Find item by id" + System.lineSeparator()
+                        + "1. Exit Program" + System.lineSeparator()
+                        + "=== Find item by id ====" + System.lineSeparator()
+                        + item + System.lineSeparator()
+                        + "Menu." + System.lineSeparator()
+                        + "0. Find item by id" + System.lineSeparator()
+                        + "1. Exit Program" + System.lineSeparator()
+        ));
+    }
 }
