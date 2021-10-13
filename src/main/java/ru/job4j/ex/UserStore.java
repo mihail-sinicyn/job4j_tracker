@@ -17,7 +17,7 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (!user.isValid() || user.getUsername().length() <= 3) {
+        if (!user.isValid() || user.getUsername().length() < 3) {
             throw new UserInvalidException("Invalid User or number of characters 3 or less");
         }
         return true;
@@ -32,14 +32,9 @@ public class UserStore {
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
-        } catch (UserInvalidException ui) {
+        } catch (UserInvalidException | UserNotFoundException ui) {
             ui.printStackTrace();
-        } catch (UserNotFoundException un) {
-            un.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-
     }
 }
 
