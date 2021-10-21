@@ -2,11 +2,11 @@ package ru.job4j.pojo;
 
 public class Library {
     public static void main(String[] args) {
-        Book abc = new Book("Букварь", 50 );
-        Book necronomicon = new Book("Некрономикон", 666 );
-        Book constitution = new Book("Конституция РФ", 96 );
-        Book cleanCode = new Book("Clean code", 464 );
-        Book[] books= new Book[4];
+        Book abc = new Book("Букварь", 50);
+        Book necronomicon = new Book("Некрономикон", 666);
+        Book constitution = new Book("Конституция РФ", 96);
+        Book cleanCode = new Book("Clean code", 464);
+        Book[] books = new Book[4];
         books[0] = abc;
         books[1] = necronomicon;
         books[2] = constitution;

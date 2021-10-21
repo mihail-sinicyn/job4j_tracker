@@ -16,10 +16,19 @@ public class Battery {
     public static void main(String[] args) {
         Battery firstBattery = new Battery(43);
         Battery secondBattery = new Battery(57);
-        System.out.println("firstBattery : " + firstBattery.load + ". secondBattery : " + secondBattery.load);
+        System.out.println("firstBattery : "
+                + firstBattery.load
+                    + ". secondBattery : "
+                        + secondBattery.load);
         firstBattery.exchange(secondBattery);
-        System.out.println("firstBattery : " + firstBattery.load + ". secondBattery : " + secondBattery.load);
+        System.out.println("firstBattery : "
+                + firstBattery.load
+                    + ". secondBattery : "
+                        + secondBattery.load);
         secondBattery.exchange(firstBattery);
-        System.out.println("firstBattery : " + firstBattery.load + ". secondBattery : " + secondBattery.load);
+        System.out.println("firstBattery : "
+                + firstBattery.load
+                    + ". secondBattery : "
+                        + secondBattery.load);
     }
 }

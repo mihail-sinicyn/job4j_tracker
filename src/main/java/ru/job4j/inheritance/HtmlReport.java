@@ -4,6 +4,7 @@ public class HtmlReport extends TextReport {
 
     @Override
     public String generate(String name, String body) {
-        return System.lineSeparator() + "<h1>" + name + "</h1>" + "<br/>" + "<span>" + body + "</span>";
+        return System.lineSeparator()
+                + "<h1>" + name + "</h1>" + "<br/>" + "<span>" + body + "</span>";
     }
 }

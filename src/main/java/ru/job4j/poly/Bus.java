@@ -14,6 +14,6 @@ public class Bus implements Transport {
 
     @Override
     public int refill(int total) {
-        return total*59;
+        return total * 59;
     }
 }
