@@ -8,9 +8,6 @@ import static org.junit.Assert.assertThat;
 
 public class PhoneDictionaryTest {
 
-    private void assertTrue(boolean empty) {
-    }
-
     @Test
     public void whenFindByName() {
         PhoneDictionary phones = new PhoneDictionary();
@@ -28,6 +25,7 @@ public class PhoneDictionaryTest {
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
         ArrayList<Person> persons = phones.find("Mikhail");
-        assertTrue(persons.isEmpty());
+        ArrayList<Person> empty = new ArrayList<>();
+        assertThat(persons, is(empty));
     }
 }
