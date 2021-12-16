@@ -14,3 +14,4 @@ public class PassportOfficeTest {
         assertThat(office.get(citizen.getPassport()), is(citizen));
     }
 }
+/**/
