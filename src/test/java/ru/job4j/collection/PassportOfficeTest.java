@@ -19,6 +19,6 @@ public class PassportOfficeTest {
         Citizen citizen = new Citizen("2f44a", "Petr Arsentev");
         PassportOffice office = new PassportOffice();
         office.add(citizen);
-        assertThat(office.add(new Citizen("2f44a", "Petr Arsentev")), is(false));
+        assertFalse(office.add(new Citizen("2f44a", "Petr Arsentev")));
     }
 }
