@@ -44,3 +44,4 @@ public class BankServiceTest {
         assertThat(bank.findByRequisite(user.getPassport(), "113").getBalance(), is(200D));
     }
 }
+/**/
