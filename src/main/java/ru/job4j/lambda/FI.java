@@ -28,5 +28,16 @@ public class FI {
         Arrays.sort(atts, cmpDescSize);
 
         System.out.println(Arrays.toString(atts));
+
+        String[] names = {
+                "Ivan",
+                "Petr"
+        };
+
+        Comparator<String> lengthCmp = (left, right) -> {
+            System.out.println("execute comparator");
+            return Integer.compare(left.length(), right.length());
+        };
+        Arrays.sort(names, lengthCmp);
     }
 }
