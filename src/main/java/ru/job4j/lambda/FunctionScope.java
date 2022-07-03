@@ -13,4 +13,4 @@ public class FunctionScope {
 
         return result;
     }
-}
+}/**/
