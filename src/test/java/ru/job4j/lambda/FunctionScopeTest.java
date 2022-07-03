@@ -33,4 +33,4 @@ public class FunctionScopeTest {
         List<Double> expected = Arrays.asList(3D, 6D, 13D, 28D);
         assertThat(result, is(expected));
     }
-}/**/
+}
