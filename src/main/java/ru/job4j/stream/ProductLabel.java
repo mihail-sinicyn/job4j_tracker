@@ -13,4 +13,3 @@ public class ProductLabel {
                 .collect(Collectors.toList());
     }
 }
-/**/

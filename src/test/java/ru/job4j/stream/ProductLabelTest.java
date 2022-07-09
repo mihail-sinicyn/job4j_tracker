@@ -34,4 +34,3 @@ public class ProductLabelTest {
         assertThat(strings, is(expected));
     }
 }
-/**/
